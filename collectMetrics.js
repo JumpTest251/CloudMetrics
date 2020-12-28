@@ -25,5 +25,6 @@ module.exports.collectAndReport = async function () {
     const cpuUsage = await cpu.usage();
     const players = await pingServer();
     const memory = memoryUsage();
+    console.log(`mem: ${os.freemem()}/${os.totalmem()}`)
     console.log(`cpu: ${cpuUsage}, players: ${players.players.online}, memory: ${memory}`)
 }
