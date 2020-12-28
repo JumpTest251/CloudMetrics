@@ -19,6 +19,7 @@
   "homepage": "https://github.com/JumpTest251/CloudMetrics#readme",
   "dependencies": {
     "axios": "^0.21.1",
-    "mcping-js": "^1.5.0"
+    "mcping-js": "^1.5.0",
+    "os-utils": "0.0.14"
   }
 }
