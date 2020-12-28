@@ -24,9 +24,14 @@ function cpuUsage() {
     })
 }
 
+function memoryUsage() {
+    const used = os.totalmem() - os.freemem();
+    return used * 100 / os.totalmem();
+}
+
 module.exports.collectAndReport = async function () {
     const cpu = await cpuUsage();
     const players = await pingServer();
-    const memory = os.totalmem() * (os.freemem() / 100);
-    console.log(`cpu: ${cpu}, players: ${players}, memory: ${memory}`)
+    const memory = memoryUsage();
+    console.log(`cpu: ${cpu}, players: ${players.players.online}, memory: ${memory}`)
 }
