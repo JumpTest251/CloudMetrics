@@ -22,8 +22,8 @@ function memoryUsage() {
 }
 
 module.exports.collectAndReport = async function () {
-    const cpu = await cpu.usage();
+    const cpuUsage = await cpu.usage();
     const players = await pingServer();
     const memory = memoryUsage();
-    console.log(`cpu: ${cpu}, players: ${players.players.online}, memory: ${memory}`)
+    console.log(`cpu: ${cpuUsage}, players: ${players.players.online}, memory: ${memory}`)
 }
