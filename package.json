@@ -1,0 +1,23 @@
+{
+  "name": "cloudmetrics",
+  "version": "1.0.0",
+  "description": "Metric collector for Minecraft-Cloud",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JumpTest251/CloudMetrics.git"
+  },
+  "author": "Jumper251",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JumpTest251/CloudMetrics/issues"
+  },
+  "homepage": "https://github.com/JumpTest251/CloudMetrics#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "mcping-js": "^1.5.0"
+  }
+}
