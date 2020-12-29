@@ -6,7 +6,7 @@ const { serverPort } = require('./utils/config');
 
 function pingServer() {
     return new Promise(resolve => {
-        const server = new MinecraftServer('localhost', serverPort);
+        const server = new MinecraftServer('amtest.jumper251.mcservers.me', serverPort);
 
         server.ping(4000, '47', (err, data) => {
             console.log(err, ": " + data)
