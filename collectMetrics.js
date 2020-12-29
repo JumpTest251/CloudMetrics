@@ -8,7 +8,7 @@ function pingServer() {
     return new Promise(resolve => {
         const server = new MinecraftServer('amtest.jumper251.mcservers.me', serverPort);
 
-        server.ping(10000, '47', (err, data) => {
+        server.ping(20000, '47', (err, data) => {
             console.log(err, ": " + data)
             if (err || !data) return resolve();
 
