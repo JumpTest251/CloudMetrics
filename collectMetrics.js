@@ -9,6 +9,7 @@ function pingServer() {
         const server = new MinecraftServer('localhost', serverPort);
 
         server.ping(4000, '47', (err, data) => {
+            console.log(err, ": " + data)
             if (err || !data) return resolve();
 
             resolve(data);
