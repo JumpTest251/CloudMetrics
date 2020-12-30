@@ -2,12 +2,12 @@ const os = require('os');
 const { cpu } = require('node-os-utils');
 
 const { MinecraftServer } = require('mcping-js');
-const { serverPort } = require('./utils/config');
+const { serverPort, host } = require('./utils/config');
 const reportMetrics = require('./utils/reportMetrics');
 
 function pingServer() {
     return new Promise(resolve => {
-        const server = new MinecraftServer('localhost', serverPort);
+        const server = new MinecraftServer(host, serverPort);
 
         server.ping(3000, '47', (err, data) => {
             if (err) console.log(err);
