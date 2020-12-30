@@ -10,6 +10,7 @@ function pingServer() {
         const server = new MinecraftServer('localhost', serverPort);
 
         server.ping(3000, '47', (err, data) => {
+            if (err) console.log(err);
             if (err || !data) return resolve();
 
             resolve(data);
@@ -26,7 +27,7 @@ module.exports.collectAndReport = async function () {
     const cpuUsage = await cpu.usage();
     const players = await pingServer();
     const memory = memoryUsage();
-    // console.log(`cpu: ${cpuUsage}, players: ${players ? players.players.online : ''}, memory: ${memory}`)
+    console.log(`cpu: ${cpuUsage}, players: ${players ? players.players.online : ''}, memory: ${memory}`)
 
     const metrics = [];
     metrics.push({ type: 'cpu', value: cpuUsage }, { type: 'memory', value: memory });
